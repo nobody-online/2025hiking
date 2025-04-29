@@ -1,0 +1,333 @@
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健走活動</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="parallax-layer layer-back">
+        <h1>樹林山佳-大棟山健走活動</h1>
+        <p>探索城市綠意，享受健康生活</p>
+    </header>
+
+    <main>
+        <section id="intro" class="content-section">
+            <div class="container">
+                <h2>活動簡介</h2>
+                <p>加入我們，一起漫步在風景優美的樹林山佳至大棟山路線上，呼吸新鮮空氣！這不僅是一次健康的健走，更是一場充滿樂趣與驚喜的山林探索之旅。適合全家大小一同參與。</p>
+                <ul>
+                    <li><strong>日期：</strong> 2025年 5 月 24 日 (星期六)</li>
+                    <li><strong>時間：</strong> 上午 9:25 集合，9:30 出發</li>
+                    <li><strong>集合地點：</strong> 山佳車站</li>
+                    <li><strong>費用：</strong> 免費參加 (需事先報名)</li>
+                </ul>
+                <a href="#register" class="cta-button">立即報名</a>
+            </div>
+        </section>
+
+        <section id="stats" class="content-section stats-section">
+            <div class="container">
+                <h2>活動熱度</h2>
+                <div class="stat-item">
+                    <h3>目前報名人數</h3>
+                    <p><span id="registered-count" data-target="0">0</span> 人</p>
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="route" class="parallax-layer layer-middle">
+            <div class="overlay"></div>
+            <div class="container text-overlay">
+                <h2>路線圖</h2>
+                <p>全程約 14 公里，充滿熱情、激情與汗水。</p>
+            </div>
+            <!-- 這裡可以放路線圖圖片或嵌入地圖 -->
+            <div class="map-placeholder">
+                <!-- <svg width="100%" height="300" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
+                    <path d="M50 150 Q 150 250, 250 150 T 450 150 Q 550 250, 650 150 T 750 150" stroke-width="5"
+                        fill="none" stroke-dasharray="10, 5" />
+                    <circle cx="50" cy="150" r="10" class="start" />
+                    <text x="50" y="180" text-anchor="middle">起點-山佳車站</text>
+                    <circle cx="250" cy="150" r="8" class="point" />
+                    <text x="250" y="180" text-anchor="middle">山佳鐵道地景公園</text>
+                    <circle cx="450" cy="150" r="8" class="supply" />
+                    <text x="450" y="180" text-anchor="middle">大棟山登山步道</text>
+                    <circle cx="650" cy="150" r="8" class="point" />
+                    <text x="650" y="180" text-anchor="middle">阿香土雞城</text>
+                    <circle cx="750" cy="150" r="10" class="end" />
+                    <text x="750" y="180" text-anchor="middle">終點-山佳車站</text>
+                </svg> -->
+                <iframe class="google-map"
+                    src="https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d28931.413472553668!2d121.3775538990194!3d24.985613431827094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e2!4m5!1s0x34681c50c9b4f4fd%3A0x24ca25d30416d710!2zMjM45paw5YyX5biC5qi55p6X5Y2A5Lit5bGx6Lev5LiJ5q61MTA46Jmf5bGx5L2z!3m2!1d24.9727283!2d121.39254389999999!4m5!1s0x34681c572c374f19%3A0x7bd7186d7f486290!2z5paw5YyX5biC5qi55p6X5Y2A5bGx5L2z6KGX5bGx5L2z6ZC16YGT5Zyw5pmv5YWs5ZyS!3m2!1d24.9730398!2d121.3948678!4m5!1s0x34681da08e41e0bd%3A0xcf176aeaed4a40af!2z5aSn5qOf5bGx55m75bGx5q2l6YGTIDIzOOahg-WckuW4gum-nOWxseWNgA!3m2!1d24.9982851!2d121.40059289999999!4m5!1s0x34681db7ab2ec733%3A0xb31b6ddffb9fc988!2z6Zi_6aaZ5Zyf6Zue5Z-OIDMzM-ahg-WckuW4gum-nOWxseWNgOWkp-ajn-Wxsei3rzY1MeiZnw!3m2!1d24.9926785!2d121.38267049999999!4m5!1s0x34681c50c9b4f4fd%3A0x24ca25d30416d710!2z5bGx5L2zIDIzOOaWsOWMl-W4guaoueael-WNgOS4reWxsei3r-S4ieautTEwOOiZnw!3m2!1d24.9727283!2d121.39254389999999!5e0!3m2!1szh-TW!2stw!4v1745918240134!5m2!1szh-TW!2stw"
+                    width="375" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section id="schedule" class="content-section">
+            <div class="container">
+                <h2>活動流程</h2>
+                <ul class="timeline">
+                    <li>
+                        <span class="time">09:25 AM</span>
+                        <div class="content">
+                            <h3>集合報到</h3>
+                            <p>於山佳車站集合，準時出發。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">09:30 AM</span>
+                        <div class="content">
+                            <h3>山佳鐵道地景公園</h3>
+                            <p>步行至山佳鐵道地景公園，短暫參觀拍照。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">09:50 AM</span>
+                        <div class="content">
+                            <h3>大棟山登山口</h3>
+                            <p>沿大安路步行至大棟山登山口</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">10:10 AM</span>
+                        <div class="content">
+                            <h3>征服大棟山</h3>
+                            <p>前往大棟山405m三角點(沿途可短暫休息)</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">11:30 AM</span>
+                        <div class="content">
+                            <h3>抵達三角點</h3>
+                            <p>拍照、補充體力</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">11:50 AM</span>
+                        <div class="content">
+                            <h3>下山</h3>
+                            <p>原路下山，前往用餐地點</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">12:40 AM</span>
+                        <div class="content">
+                            <h3>阿香土雞城</h3>
+                            <p>享用美食</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="time">13:40 AM</span>
+                        <div class="content">
+                            <h3>自由活動-返程</h3>
+                            <p>用餐後自由活動，步行或搭車回山佳車站/樹林市區</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="transport" class="content-section">
+            <div class="container">
+                <h2>交通資訊 (前往集合點)</h2>
+                <div class="transport-options">
+                    <div class="option">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40"
+                            height="40">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        <h3>捷運</h3>
+                        <p>搭乘捷運橘線至「陽光公園站」，由 1 號出口步行約 10 分鐘即可抵達集合點。</p>
+                    </div>
+                    <div class="option">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40"
+                            height="40">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5.5 12H13v-2h1.5v2zm0-3H13v-2h1.5v2zm0-3H13V8h1.5v2zM9 16.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0-4.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
+                        </svg>
+                        <h3>公車</h3>
+                        <p>搭乘 202、綠1、棕9 路公車至「河濱公園站」，下車即達。</p>
+                    </div>
+                    <div class="option">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40"
+                            height="40">
+                            <path
+                                d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11C5.84 5 5.28 5.42 5.08 6.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.3 1.5-1.3s1.5.67 1.5 1.5S18.33 16 17.5 16zM5 11l1.5-4.5h11L19 11H5z" />
+                        </svg>
+                        <h3>自行開車</h3>
+                        <p>公園周邊設有收費停車場，但車位有限，建議提早抵達或搭乘大眾運輸工具。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dining" class="parallax-layer layer-front">
+            <div class="overlay"></div>
+            <div class="container text-overlay">
+                <h2>推薦用餐地點 (終點附近)</h2>
+                <p>登山結束後，不妨到附近品嚐美食，補充體力！</p>
+            </div>
+        </section>
+
+        <section id="dining-details" class="content-section">
+            <div class="container">
+                <div class="dining-options">
+                    <div class="dining-card">
+                        <img src="./image/阿香土雞城.png" alt="阿香土雞城">
+                        <h3>阿香土雞城</h3>
+                        <p>以土雞料理為號召的餐廳，質樸的選擇。</p>
+                        <p><small>交通：從三角點步行約 16 分鐘。</small></p>
+                        <p><small><a href="https://footinder.com.tw/%E6%A1%83%E5%9C%92%E5%B8%82%E9%BE%9C%E5%B1%B1%E5%8D%80/14796/"
+                                    target="_blank">more</a></small>
+                        </p>
+                    </div>
+                    <div class="dining-card">
+                        <img src="./image/霖咖啡.png" alt="霖咖啡 lincafe'">
+                        <h3>霖咖啡</h3>
+                        <p>精品咖啡 家傳甜點 絕美景觀 休憩放空的好地方</p>
+                        <p><small>交通：阿香土雞城步行 6 分鐘。</small></p>
+                        <p><small><a href="https://www.facebook.com/profile.php?id=100068926722335&locale=zh_TW"
+                                    target="_blank">more</a></small>
+                        </p>
+                    </div>
+                    <div class="dining-card">
+                        <img src="./image/樹頂上.png" alt="TREE TOP KAFFA 樹頂上咖啡廳">
+                        <h3>TREE TOP KAFFA 樹頂上</h3>
+                        <p>香醇咖啡與精緻甜點，享受悠閒午後時光。</p>
+                        <p><small>交通：阿香土雞城步行 20 分鐘。</small></p>
+                        <p><small><a href="https://www.facebook.com/TREETOPKAFFA/" target="_blank">more</a></small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="content-section register-section">
+            <div class="container">
+                <h2>立即報名</h2>
+                <p>馬上填寫報名與我們一同征服小百岳No.15！</p>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="您的姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="unit" name="name" required>
+                            <option value="" disabled selected>請選擇科別</option>
+                            <option value="營管科">營管科</option>
+                            <option value="CPE科">CPE科</option>
+                            <option value="會員科">會員科</option>
+                            <option value="點數科">點數科</option>
+                            <option value="支付科">支付科</option>
+                            <option value="開發科">開發科</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="people" name="people" required>
+                            <option value="" disabled selected>參加人數(含自己)</option>
+                            <option value="1">1人</option>
+                            <option value="2">2人</option>
+                            <option value="3">3人</option>
+                            <option value="4">4人</option>
+                            <option value="5">5人</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="kids" name="kids">
+                            <option value="" disabled selected>參加小孩數 (選填)</option>
+                            <option value="0">無</option>
+                            <option value="1">1人</option>
+                            <option value="2">2人</option>
+                            <option value="3">3人</option>
+                            <option value="4">4人</option>
+                            <option value="5">5人</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="food" name="food" required>
+                            <option value="" disabled selected>用餐備註</option>
+                            <option value="葷">葷食</option>
+                            <option value="素">素食</option>
+                            <option value="不用餐">不用餐</option>
+                        </select>
+                    </div>
+                    <button id="submit" type="submit">送出報名</button>
+                </form>
+                <div id=" message">
+
+                </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 春遊健走活動小組</p>
+        </div>
+    </footer>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+        <a href="#intro" title="活動簡介">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2zm0-3H13v-2h1.5v2zm0-3H13V8h1.5v2zM9 16.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0-4.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
+            </svg>
+            <span>簡介</span>
+        </a>
+        <a href="#stats" title="活動熱度">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z" />
+            </svg>
+            <span>熱度</span>
+        </a>
+        <a href="#route" title="路線圖">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z" />
+            </svg>
+            <span>路線</span>
+        </a>
+        <a href="#schedule" title="活動流程">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+            </svg>
+            <span>流程</span>
+        </a>
+        <a href="#transport" title="交通資訊">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5.5 12H13v-2h1.5v2zm0-3H13v-2h1.5v2zm0-3H13V8h1.5v2zM9 16.5c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0-4.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z" />
+            </svg>
+            <span>交通</span>
+        </a>
+        <a href="#dining" title="推薦用餐">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" />
+            </svg>
+            <span>用餐</span>
+        </a>
+        <a href="#register" title="立即報名">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                <path
+                    d="M14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.26 0-.51.1-.7.29l-1.83 1.83 3.75 3.75 1.83-1.83c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z" />
+            </svg>
+            <span>報名</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
