@@ -286,9 +286,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).then(() => {
                     document.getElementById('registrationForm').reset();
                     fetchResponsesCount();
-                    setTimeout(() => {
-                        scrollToStats();
-                    }, 300); // 延遲滾動位置，確保 SweetAlert 的重設動作結束
+                    // setTimeout(() => {
+                    //     scrollToStats();
+                    // }, 300); // 延遲滾動位置，確保 SweetAlert 的重設動作結束
                 });
             })
             .catch(error => {
