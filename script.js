@@ -266,16 +266,30 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(response => response.text())
             .then(data => {
+                // Swal.fire({
+                //     title: '報名成功！',
+                //     text: data,
+                //     icon: 'success',
+                //     confirmButtonText: '確定',
+                //     returnFocus: false
+                // });
+                // document.getElementById('registrationForm').reset();
+                // fetchResponsesCount();
+                // scrollToStats(); // ←這會在彈窗出現時就執行
+
                 Swal.fire({
                     title: '報名成功！',
                     text: data,
                     icon: 'success',
                     confirmButtonText: '確定',
                     returnFocus: false
+                }).then(() => {
+                    document.getElementById('registrationForm').reset();
+                    fetchResponsesCount();
+                    setTimeout(() => {
+                        scrollToStats();
+                    }, 300); // 延遲滾動位置，確保 SweetAlert 的重設動作結束
                 });
-                document.getElementById('registrationForm').reset();
-                fetchResponsesCount();
-                scrollToStats(); // ←這會在彈窗出現時就執行
             })
             .catch(error => {
                 swal.fire({
