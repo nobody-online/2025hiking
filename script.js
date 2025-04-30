@@ -141,6 +141,88 @@ document.addEventListener('DOMContentLoaded', () => {
         submitForm();
     });
 
+    // function submitForm() {
+    //     // 獲取表單數據
+    //     const name = document.getElementById('name').value;
+    //     const unit = document.getElementById('unit').value;
+    //     const people = document.getElementById('people').value;
+    //     const kids = document.getElementById('kids').value;
+    //     const food = document.getElementById('food').value;
+
+    //     // 檢查數據是否填寫
+    //     if (!name || !unit || !people || !kids || !food) {
+    //         showMessage('請填寫所有必填欄位', false);
+    //         return;
+    //     }
+
+    //     // 創建 URL 編碼的表單數據字符串
+    //     const formData = new URLSearchParams();
+    //     formData.append('name', name);
+    //     formData.append('unit', unit);
+    //     formData.append('people', people);
+    //     formData.append('kids', kids);
+    //     formData.append('food', food);
+
+    //     // 顯示載入訊息
+    //     showMessage('提交中，請稍候...', true);
+
+    //     // 發送 AJAX 請求
+    //     fetch('https://script.google.com/macros/s/AKfycbz5uZwBcwURJ8rulq1-JmpAc8Iqgt82YN09dtbvtp4lnY-ERRwvUBT2DLnavZuzeqJa/exec', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/x-www-form-urlencoded',
+    //         },
+    //         body: formData.toString()
+    //     })
+    //         .then(response => response.text())
+    //         .then(data => {
+    //             showMessage('報名成功！' + data, true);
+    //             document.getElementById('registrationForm').reset();
+    //             fetchResponsesCount();
+    //             scrollToStats(); //滾動到指定 section
+
+    //         })
+    //         .catch(error => {
+    //             showMessage('報名失敗！請稍後再試。錯誤: ' + error, false);
+    //             console.error('Error:', error);
+    //         });
+    // }
+
+
+    function scrollToStats() {
+        const section = document.getElementById('stats');
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
+    // function showMessage(message, isSuccess) {
+    //     const messageDiv = document.getElementById('messageBox');
+    //     if (messageDiv) {
+    //         messageDiv.textContent = message;
+    //         messageDiv.style.display = 'block';
+
+    //         if (isSuccess) {
+    //             messageDiv.style.backgroundColor = '#d4edda';
+    //             messageDiv.style.color = '#155724';
+    //             messageDiv.style.border = '1px solid #c3e6cb';
+    //         } else {
+    //             messageDiv.style.backgroundColor = '#f8d7da';
+    //             messageDiv.style.color = '#721c24';
+    //             messageDiv.style.border = '1px solid #f5c6cb';
+    //         }
+
+    //         // 5秒後隱藏訊息
+    //         setTimeout(() => {
+    //             messageDiv.style.display = 'none';
+    //         }, 5000);
+    //     } else {
+    //         // 作為後備方案，如果找不到消息框，則使用警告框
+    //         alert(message);
+    //     }
+    // }
+
     function submitForm() {
         // 獲取表單數據
         const name = document.getElementById('name').value;
@@ -164,7 +246,15 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('food', food);
 
         // 顯示載入訊息
-        showMessage('提交中，請稍候...', true);
+        swal.fire({
+            title: '提交中，請稍候...',
+            text: '正在提交您的報名表',
+            icon: 'info',
+            buttons: false,
+            closeOnClickOutside: false,
+            closeOnEsc: false,
+        });
+        swal.showLoading();
 
         // 發送 AJAX 請求
         fetch('https://script.google.com/macros/s/AKfycbz5uZwBcwURJ8rulq1-JmpAc8Iqgt82YN09dtbvtp4lnY-ERRwvUBT2DLnavZuzeqJa/exec', {
@@ -176,50 +266,43 @@ document.addEventListener('DOMContentLoaded', () => {
         })
             .then(response => response.text())
             .then(data => {
-                showMessage('報名成功！' + data, true);
+                Swal.fire({
+                    title: '報名成功！',
+                    text: data,
+                    icon: 'success',
+                    confirmButtonText: '確定',
+                    returnFocus: false
+                });
                 document.getElementById('registrationForm').reset();
                 fetchResponsesCount();
-                scrollToStats(); //滾動到指定 section
-
+                scrollToStats(); // ←這會在彈窗出現時就執行
             })
             .catch(error => {
-                showMessage('報名失敗！請稍後再試。錯誤: ' + error, false);
+                swal.fire({
+                    title: '報名失敗！',
+                    text: '請稍後再試。錯誤: ' + error,
+                    icon: 'error',
+                    button: '確定',
+                });
                 console.error('Error:', error);
             });
     }
 
-
-    function scrollToStats() {
-        const section = document.getElementById('stats');
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
-
-
     function showMessage(message, isSuccess) {
-        const messageDiv = document.getElementById('messageBox');
-        if (messageDiv) {
-            messageDiv.textContent = message;
-            messageDiv.style.display = 'block';
-
-            if (isSuccess) {
-                messageDiv.style.backgroundColor = '#d4edda';
-                messageDiv.style.color = '#155724';
-                messageDiv.style.border = '1px solid #c3e6cb';
-            } else {
-                messageDiv.style.backgroundColor = '#f8d7da';
-                messageDiv.style.color = '#721c24';
-                messageDiv.style.border = '1px solid #f5c6cb';
-            }
-
-            // 5秒後隱藏訊息
-            setTimeout(() => {
-                messageDiv.style.display = 'none';
-            }, 5000);
+        if (isSuccess) {
+            swal.fire({
+                title: '成功',
+                text: message,
+                icon: 'success',
+                button: '確定',
+            });
         } else {
-            // 作為後備方案，如果找不到消息框，則使用警告框
-            alert(message);
+            swal.fire({
+                title: '錯誤',
+                text: message,
+                icon: 'error',
+                button: '確定',
+            });
         }
     }
 
