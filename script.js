@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 Swal.fire({
                     title: '報名成功！',
-                    text: data,
+                    // text: data,
                     icon: 'success',
                     confirmButtonText: '確定',
                     returnFocus: false
