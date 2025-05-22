@@ -230,9 +230,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const people = document.getElementById('people').value;
         const kids = document.getElementById('kids').value;
         const food = document.getElementById('food').value;
+        const transportation = document.getElementById('transportation').value;
+
 
         // 檢查數據是否填寫
-        if (!name || !unit || !people || !kids || !food) {
+        if (!name || !unit || !people || !kids || !food || !transportation) {
             showMessage('請填寫所有必填欄位', false);
             return;
         }
@@ -244,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('people', people);
         formData.append('kids', kids);
         formData.append('food', food);
+        formData.append('transportation', transportation);
 
         // 顯示載入訊息
         swal.fire({
@@ -257,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         swal.showLoading();
 
         // 發送 AJAX 請求
-        fetch('https://script.google.com/macros/s/AKfycbz5uZwBcwURJ8rulq1-JmpAc8Iqgt82YN09dtbvtp4lnY-ERRwvUBT2DLnavZuzeqJa/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbyEJgP3gBnIFupCmiytZFMN920NH1VN_WmDGc4-gvPPkEd7_4el9tGRAh8vvvD-SxZK/exec', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
